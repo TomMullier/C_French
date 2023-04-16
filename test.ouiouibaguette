@@ -1,0 +1,29 @@
+principale () {
+    On place 4 dans _a;
+    Afficher _a;
+    
+    pour _i allant de 0 à 3 par pas de 1{
+        Afficher _i;
+    };
+
+    Tant que (_a est inférieur ou égal à 7) {
+        Afficher _a;
+        On place _a + 1 dans _a;
+    };
+    
+    si (_a est égal à 4)
+    alors Afficher 0000;
+    sinon Afficher 9999;
+    fin_si;
+
+    Ouvrir le fichier texte;
+    Ecris _a dans le fichier texte;
+    Lire le fichier texte;
+    Donne moi les caractéristiques du fichier;
+    Lire le fichier texte;
+    Vide le fichier texte;
+    Lire le fichier texte;
+    Fermer le fichier texte;
+
+    /* Ceci est évidemment un commentaire */;  
+}
