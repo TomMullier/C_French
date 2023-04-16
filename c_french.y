@@ -452,7 +452,7 @@ int runProgram (const vector <instruction> &programme){
 %left '*' '/'
 
 %%
-programme    : includes definitions MAIN '(' ')' '{'  instructions  '}'   { printf ("Programme correct!\n"); }
+programme    : includes definitions MAIN '(' ')' '{'  instructions  '}'   {}
 
 includes     : {}
 
@@ -652,7 +652,7 @@ int yyerror(char *s) {
 }
 
 int main(int argc, char** argv) {
-    printf("\nC'est Mémé ! V0.0\n_________________\n");
+    printf("\nBonjour cher Monsieur, bienvenue dans notre compilateur !\n");
     
     if ( argc > 1 )
         yyin = fopen( argv[1], "r" );
@@ -661,7 +661,7 @@ int main(int argc, char** argv) {
 
     yyparse();
 
-    printf("\nLE CODE GÉNÉRÉ : _________________\n");
+    /* printf("\nLE CODE GÉNÉRÉ : _________________\n");
     
     int a = 0;
     for (auto i : programme) {
@@ -671,7 +671,7 @@ int main(int argc, char** argv) {
              << i.variable << '\n';
     }
 
-   printf("\nÉXÉCUTION DU CODE SUR LA VM : _________________\n");
+   printf("\nÉXÉCUTION DU CODE SUR LA VM : _________________\n"); */
 
    runProgram(programme);
 
